@@ -1,0 +1,105 @@
+{{define "profile"}}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FIND 5</title>
+
+        {{template "global_header" .}}
+
+		<script src="/static/vue/vue.min.js"></script>
+
+		<link rel="stylesheet" href="/static/ui/scroll2top.css" />
+		<script src="/static/ui/scroll2top.js"></script>
+
+		<link rel="stylesheet" href="/static/ui/stickyNavBar.css" />
+		<script src="/static/ui/stickyNavBar.js"></script>
+
+		<link rel="stylesheet" href="/static/style.css" />
+		<!-- <script src="/static/config.js"></script> -->
+		<!-- <script src="/static/api.js"></script> -->
+		<!-- <script src="/static/app.js"></script> -->
+
+	</head>
+	<body>
+
+		{{template "navbar" .}}
+
+		<div class="container">
+
+			<div class="row" id="user">
+				<!-- <label>[| username |]</label> -->
+			</div>
+
+			<div class="row">
+
+				<!-- <div class="col col-2" id="devices">
+					<label>Devices</label>
+					<span class="btn btn-sm btn-default" v-on:click="createDevice()">
+						<i class="fa fa-plus"></i>
+					</span>
+					<div class="objects"></div>
+				</div>
+
+				<div class="col col-4" id="device" style="display: none;">
+					<label>Device</label>
+					<div class="attributes">
+						<div><label>name:</label>  [| name |]</div>
+						<div><label>id:</label>  [| id |]</div>
+						<div><label>type:</label>  [| type |]</div>
+						<div><label>is_active:</label>  [| is_active |]</div>
+						<div><label>is_deleted:</label>  [| is_deleted |]</div>
+						<div><label>created_at:</label>  [| created_at |]</div>
+						<div><label>updated_at:</label>  [| updated_at |]</div>
+					</div>
+				</div>
+
+				<div class="col col-2" id="sensors" style="display: none;">
+					<label>sensors</label>
+					<span class="btn btn-sm btn-default" v-on:click="createSensor()">
+						<i class="fa fa-plus"></i>
+					</span>
+					<div class="objects"></div>
+				</div>
+
+				<div class="col col-4" id="sensor" style="display: none;">
+					<label>Sensor</label>
+					<div class="attributes">
+						<div><label>name:</label>  [| name |]</div>
+						<div><label>id:</label>  [| id |]</div>
+						<div><label>type:</label>  [| type |]</div>
+						<div><label>is_active:</label>  [| is_active |]</div>
+						<div><label>is_deleted:</label>  [| is_deleted |]</div>
+						<div><label>created_at:</label>  [| created_at |]</div>
+						<div><label>updated_at:</label>  [| updated_at |]</div>
+					</div>
+				</div> -->
+
+			</div>
+
+		</div>
+
+		<script>
+
+			var api,
+				app,
+				config;
+
+			$(document).ready(function(){
+				// config = new Config({{ index . }});
+				// let user = config.get("user");
+				// api = new FindApi(user);
+				// app = new App(user, api);
+
+
+				enableToTop();
+				enableStickyNavBar();
+
+				$('body').height(2000);
+			});
+
+		</script>
+	</body>
+</html>
+
+{{end}}

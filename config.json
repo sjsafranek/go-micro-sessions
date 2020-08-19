@@ -1,0 +1,30 @@
+{
+	"communication": [
+		{
+			"type": "http",
+			"port": 8081
+		},
+		{
+			"type": "tcp",
+			"port": 9622
+		}
+	],
+	"database": {
+		"engine": "postgres",
+		"dbname": "sessionsdb",
+		"dbpass": "dev",
+		"dbuser": "sessionsuser",
+		"host": "localhost",
+		"port": 5432,
+		"sslmode": "disable"
+	},
+	"redis": {
+		"host": "localhost",
+		"port": 6379
+	},
+	"api": {
+		"public_methods": [
+			"set_password"
+		]
+	}
+}
